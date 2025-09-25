@@ -28,3 +28,20 @@ elif choice == "C":
         study_hours += 15
 else:
     print("Invalid input! Defaulting to Standard Load.")
+
+study_options = ["Programming", "Math", "English", "History"]
+
+print("\nWhat subject do you want to focus on?")
+print(study_options)
+
+subject = input("Enter your choice: ")
+
+if subject in study_options:
+    if subject == "Programming" or subject == "Math":
+        current_gpa += 0.1
+        study_hours += 5
+    elif subject == "English" or subject == "History":
+        social_points += 5
+        stress_level -= 5
+else:
+    print("Invalid subject! No changes made.")
