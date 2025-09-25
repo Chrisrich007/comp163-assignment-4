@@ -1,12 +1,16 @@
+# Christopher's School Game - Complete (Test 1-4 ready)
+# Author: Christopher Arnold
+
 student_name = "Christopher Arnold"
 current_gpa = 3.48
 study_hours = 25
 social_points = 49
-stress_level = 20  
+stress_level = 20   # integer so arithmetic works
 
 print(f"Welcome, {student_name}! Starting stats:")
 print(f"GPA: {current_gpa}, Study Hours: {study_hours}, Social Points: {social_points}, Stress Level: {stress_level}")
 
+# --- Course Load Section (Test 2) ---
 print("\nChoose your course load:")
 print("A) Light (12 credits)")
 print("B) Standard (15 credits)")
@@ -36,6 +40,7 @@ else:
     study_hours += 10
     stress_level += 5
 
+# --- Study Focus Section (Test 3) ---
 study_options = ["Programming", "Math", "English", "History"]
 
 print("\nWhat subject do you want to focus on?")
@@ -46,21 +51,19 @@ subject = input("Enter your choice: ").strip().title()
 if subject not in study_options:
     print("Invalid subject! No changes made.")
 else:
-
     if subject == "Programming":
         if current_gpa < 3.0 and study_hours > 20:
-            current_gpa += 0.25  
+            current_gpa += 0.25
             study_hours += 8
             print("Intense Programming focus: big GPA boost due to dedicated hours.")
         elif current_gpa >= 3.0 or social_points > 60:
-            current_gpa += 0.12   
+            current_gpa += 0.12
             study_hours += 5
             print("Programming practice improved your skills and marginally raised your GPA.")
         else:
             current_gpa += 0.05
             study_hours += 3
             print("Basic Programming study: small gains expected.")
-
     elif subject == "Math":
         if study_hours >= 30 and not (stress_level > 60):
             current_gpa += 0.2
@@ -73,7 +76,6 @@ else:
         else:
             study_hours += 2
             print("Math study was interrupted; small progress made.")
-
     elif subject == "English":
         if stress_level > 40 and social_points < 60:
             social_points += 15
@@ -86,7 +88,6 @@ else:
         else:
             social_points += 5
             print("English practice gave a small social boost.")
-
     elif subject == "History":
         if not (study_hours < 15) and social_points > 40:
             current_gpa += 0.08
@@ -98,5 +99,30 @@ else:
             stress_level -= 2
             print("History study gave some social and stress benefits.")
 
-print("\nFinal stats after your study choice:")
+# --- Final Assessment Section (Test 4) ---
+print("\n=== FINAL SEMESTER ASSESSMENT ===")
+
+# Use 'is not' identity operator for type checking
+if type(stress_level) is not int:
+    print("Error: Stress level must be an integer!")
+else:
+    # Nested if statements with multiple outcomes
+    if current_gpa >= 3.5:
+        if stress_level < 40:
+            print("Outstanding semester! You excelled academically while keeping stress low.")
+        else:
+            print("Great GPA, but stress was high. Balance is important!")
+    elif 2.5 <= current_gpa < 3.5:
+        if social_points >= 60:
+            print("Solid semester with strong social connections to support you.")
+        else:
+            print("Average performance; consider balancing social life and academics better.")
+    else:
+        if study_hours > 40:
+            print("Despite lots of studying, grades struggled — maybe stress played a role.")
+        else:
+            print("Challenging semester. With better time management, you can improve next time.")
+
+# Display final statistics
+print("\nFinal stats:")
 print(f"GPA: {round(current_gpa, 2)}, Study Hours: {study_hours}, Social Points: {social_points}, Stress Level: {stress_level}")
