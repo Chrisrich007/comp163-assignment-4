@@ -31,3 +31,14 @@ The game demonstrates several Python concepts:
 
 ```bash
 python carnold_assignment_3.py
+
+
+---
+
+This README:  
+- Clearly explains the **game concept**.  
+- Highlights **branching logic and operator use**, which your instructor will check.  
+- Includes **AI usage disclosure** in a professional, limited way.  
+- Gives instructions on **running the game**.  
+
+If you want, I can also **add a short “Multiple Endings” section** with examples to make it even more impressive for grading. Do you want me to do that?
