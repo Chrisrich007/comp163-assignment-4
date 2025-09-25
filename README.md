@@ -26,7 +26,7 @@ The game demonstrates several Python concepts:
 
 ## How to Run
 1. Clone or download the repository.
-2. Open the Python file: `carnold_assignment_3.py`.
+2. Open the Python file: `carnold_assignment_4.py`.
 3. Run the program using a Python interpreter (Python 3.x recommended):
 
 ```bash
